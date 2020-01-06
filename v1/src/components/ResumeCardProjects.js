@@ -46,7 +46,7 @@ const styles = theme => ({
     return (
       <Card className={classes.card} variant="outlined">
       <CardContent>
-          <h5>Projects:</h5>
+          <h6>Some of my projects - implemented as part of learning new technologies:</h6>
 
           <FullWidthTabs/>
       

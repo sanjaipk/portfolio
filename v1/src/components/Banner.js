@@ -16,6 +16,15 @@ const useStyles = makeStyles(theme => ({
     display:'block',
     margin:'1px auto'
   },
+  mobileDisp: {
+
+    [theme.breakpoints.down('sm')]: {
+        display: 'none!important'
+    },
+    [theme.breakpoints.up('md')]: {
+        // display: 'inherit!important '
+    },
+},
 }));
 
 export default function Banners() {
@@ -42,8 +51,17 @@ export default function Banners() {
           src="1.jpeg"
           alt="Third slide"
         />
+    </Carousel.Item>
+    {/* <span className={classes.mobileDisp}>
+        <Carousel.Item>
+        <img
+          className={classes.imgCenter}
+          src="LinkedinLogo.png"
+          alt="Third slide"
+        />
 
       </Carousel.Item>
+      </span> */}
     </Carousel>
   );
 }

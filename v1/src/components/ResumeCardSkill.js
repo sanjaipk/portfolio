@@ -57,13 +57,13 @@ const styles = theme => ({
       <Card className={classes.card} variant="outlined">
       <CardContent>
        
-        <h5>Skills:</h5>
+        <h6>Skills:</h6>
 
-        <Chip avatar={<Avatar>A</Avatar>} label="Angular" color="primary" variant="outlined" className={classes.marginChip}/>
-        <Chip avatar={<Avatar>N</Avatar>} label=".Net" color="secondary" variant="outlined" className={classes.marginChip}/>
-        <Chip avatar={<Avatar>A</Avatar>} label="AWS" color="default" variant="outlined" className={classes.marginChip}/>
-        <Chip avatar={<Avatar>A</Avatar>} label="Azure" color="default" variant="outlined" className={classes.marginChip}/>
-        <Chip avatar={<Avatar>V</Avatar>} label="VBA" color="default" variant="outlined" className={classes.marginChip}/>
+        <Chip avatar={<Avatar>Ar</Avatar>} label="Various Software Architecture" color="primary" variant="outlined" className={classes.marginChip}/>
+        <Chip avatar={<Avatar>FS</Avatar>} label="Full Stack Developer" color="secondary" variant="outlined" className={classes.marginChip}/>
+        <Chip avatar={<Avatar>Fw</Avatar>} label="Framework Developer" color="default" variant="outlined" className={classes.marginChip}/>
+        <Chip avatar={<Avatar>TS</Avatar>} label="Technology Specialist" color="default" variant="outlined" className={classes.marginChip}/>
+        <Chip avatar={<Avatar>S</Avatar>} label="Supervisor" color="default" variant="outlined" className={classes.marginChip}/>
   
       </CardContent>
       <CardActions className={classes.putright}>

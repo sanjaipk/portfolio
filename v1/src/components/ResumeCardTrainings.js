@@ -19,6 +19,7 @@ import Grid from '@material-ui/core/Grid';
 const styles = theme => ({
   card: {
     minWidth: 275,
+    height: '100%'
   },
   bullet: {
     display: 'inline-block',
@@ -49,7 +50,7 @@ const styles = theme => ({
       <Card className={classes.card} variant="outlined">
       <CardContent>
     
-        <h5>Certifications:</h5>
+        <h6>Certifications:</h6>
       
         <Grid container spacing={1} className={classes.putcenter}>
       <Grid item xs={3} sm={2} >

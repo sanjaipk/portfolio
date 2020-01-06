@@ -54,21 +54,19 @@ function createData(name, calories) {
   return { name, calories };
 }
 
-const rows1 = [
-  createData('Frozen yoghurt', 159),
-  createData('Ice cream sandwich', 237),
-  createData('Eclair', 262),
-  createData('Cupcake', 305),
-  createData('Gingerbread', 356),
+const planned = [
+  createData('Shcema.org DB creator', '31-Jan-2018'),
+  createData('Cross Timezone alarm', '28-Jan-2018'),
+  createData('4 Pic Quiz', '07-Apr-2019'),
 ];
-const rows2 = [
-
-  createData('Cupcake', 305),
-  createData('Gingerbread', 356),
+const wip = [
+  createData('Punarchi', '12-Jan-2019'),
+  createData('Complan', '26-Jan-2019'),
 ];
-const rows3 = [
-
-  createData('Gingerbread', 356),
+const completed = [
+  createData('Droid Simple Tools App', '31-Jan-2018'),
+  createData('Indian MP Lister', '28-Jan-2018'),
+  createData('Tamil Quiz', '07-Apr-2019'),
 ];
 
 export default function FullWidthTabs() {
@@ -95,9 +93,9 @@ export default function FullWidthTabs() {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab label="Planned" {...a11yProps(0)} />
+          <Tab label="Completed" {...a11yProps(0)} />
           <Tab label="WIP" {...a11yProps(1)} />
-          <Tab label="Completed" {...a11yProps(2)} />
+          <Tab label="Planned" {...a11yProps(2)} />
         </Tabs>
   
       <SwipeableViews
@@ -106,16 +104,16 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-        <ResumeSkills  data={rows1} />
+        <ResumeSkills  data={completed} />
           <br/>
           <Button className={classes.putright} size="small" href='/resume-skills'>Learn More</Button>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <ResumeSkills data={rows2}/>
+        <ResumeSkills data={wip}/>
           <Button className={classes.putright} size="small" href='/resume-skills'>Learn More</Button>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-        <ResumeSkills data={rows3}/>
+        <ResumeSkills data={planned}/>
           <Button className={classes.putright} size="small" href='/resume-skills'>Learn More</Button>
         </TabPanel>
       </SwipeableViews>

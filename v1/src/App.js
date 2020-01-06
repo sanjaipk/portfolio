@@ -23,6 +23,7 @@ import TwoColLayout from './components/two-col-layout';
 import ResumeSkills from './components/ResumeSkills';
 import Home from './components/Home';
 import TimeLine from './components/TimeLine';
+import ComingSoon from './components/ComingSoon'
 function App() {
   return (
     <div className="App">
@@ -46,13 +47,13 @@ function App() {
                 <ResumeSkills />
               </Route>
               <Route path="/portfolio">
-                <TwoColLayout />
+                <ComingSoon />
               </Route>
               <Route path="/testimonials">
                 <Skills />
               </Route>
               <Route path="/contact">
-                <ContactUs />
+                <ComingSoon />
               </Route>
             </Switch>
             </Typography>         

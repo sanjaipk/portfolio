@@ -13,15 +13,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import StarBorder from '@material-ui/icons/StarBorder';
 import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
-import ResumeCardSkills from './ResumeCardSkill';
-import ResumeCardTrainings from './ResumeCardTrainings';
-import ResumeCardProjects from './ResumeCardProjects';
-import Grid from '@material-ui/core/Grid';
+import purple from '@material-ui/core/colors/purple';
+import pink from '@material-ui/core/colors/pink';
 
-const styles = theme => ({
+const styles = theme => ({  
   card: {
     minWidth: 275,
-    height: '100%'
   },
   bullet: {
     display: 'inline-block',
@@ -34,37 +31,39 @@ const styles = theme => ({
   pos: {
     marginBottom: 12,
   },
+  putright:{
+    float: 'right'
+  },
+  marginChip:{
+    margin: '3px 5px'
+  },
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    '& > *': {
+      margin: theme.spacing(0.5),
+    },
+  },
 });
 
 
- class Resume extends Component {
+ class ComingSoon extends Component {
  
   render() {
     const { classes } = this.props;
     let bull = <span className={classes.bullet}>•</span>;
     return (
-      <div>
-        <Grid container >
-                <Grid item  sm={12} md={6} >
-                <ResumeCardSkills/>
-                </Grid>
-                <Grid item  sm={12} md={6}>
-                <ResumeCardTrainings/>
-                </Grid>
-                </Grid>
-                <Grid container >
-                <Grid item xs={12}>
-                <ResumeCardProjects/>
-               
-                </Grid>
-            </Grid>
-     
-  
-
-      
-      </div>
+      <Card className={classes.card} variant="outlined">
+      <CardContent>
+       <h2>COMING SOON....</h2>
+      </CardContent>
+      <CardActions className={classes.putright}>
+        31-Jan-2020
+      </CardActions>
+    </Card>
     );
   }
 }
 
-export default  withStyles(styles)(Resume);
+export default  withStyles(styles)(ComingSoon);
