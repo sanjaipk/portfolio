@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import clsx from 'clsx';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 } from "react-router-dom";
 import Drawer from '@material-ui/core/Drawer';
@@ -12,17 +9,10 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Divider from '@material-ui/core/Divider';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import TextureIcon from '@material-ui/icons/Texture';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
-import { withStyles, useTheme } from "@material-ui/core/styles";
-import DraftsIcon from '@material-ui/icons/Drafts';
+import { withStyles } from "@material-ui/core/styles";
 import ListItemLink from './ListItemLink';
 const drawerWidth = 240;
 const styles = theme => ({
@@ -56,16 +46,16 @@ const styles = theme => ({
         color: 'white',
         [theme.breakpoints.down('xs')]: {
             display: 'inherit!important',
-            textAlign:'left'
+            textAlign: 'left'
         },
         [theme.breakpoints.up('sm')]: {
             display: 'none  !important'
         },
     },
-    menuItemFix : {
+    menuItemFix: {
         display: 'inline-flex!important'
     },
-    companyTitle:{
+    companyTitle: {
         paddingLeft: '20px'
     }
 });
@@ -81,26 +71,28 @@ class HeaderPFDesk extends Component {
             open: false,
             menuitems: [
                 { idx: 1, class: '', link: '/resume', text: 'About Me' },
-                { idx: 2, class: '', link: '/portfolio', text: 'Blog' },
-                { idx: 3, class: '', link: '/contact', text: 'Contact Me' }
+                { idx: 2, class: '', link: '/projects', text: 'Projects' },
+                { idx: 3, class: '', link: '/portfolio', text: 'Orgs' },
+                { idx: 4, class: '', link: '/contact', text: 'Blog' },
+                { idx: 5, class: '', link: '/portfolio', text: 'Store' }
             ]
         }
     }
-    setOpen(val) {
+    setOpen() {
         this.setState({ open: !this.state.open })
     }
     handleDrawerOpen = () => {
-        this.setOpen(!this.state.open);
+        this.setOpen();
     };
 
-    navigate = (idxx) => {
-        
+    navigate = () => {
+
     };
 
     handleDrawerClose = () => {
-        this.setOpen(false);
+        this.setOpen();
     };
-    changeColor(s, id) {
+    changeColor(s) {
         let temp = this.state.menuitems;
         temp.forEach(item => {
             if (item.idx === s) {
@@ -115,13 +107,12 @@ class HeaderPFDesk extends Component {
 
     render() {
         const { classes } = this.props;
-        let btn_class = this.state.black ? "current" : "";
         return (
             <React.Fragment>
                 <header id="home">
                     <nav id="nav-wrap">
                         <ul id="nav" className={classes.nav}>
-                        <li className={classes.mobileDisp}>  <Link to='/' >Tara Inc.</Link></li>
+                            <li className={classes.mobileDisp}>  <Link to='/' >Home</Link></li>
                             {
                                 this.state.menuitems && this.state.menuitems.map((item) => {
                                     return (
@@ -131,7 +122,7 @@ class HeaderPFDesk extends Component {
                                     )
                                 })
                             }
-                           
+
                             <li className={classes.hambugerColor}>
                                 <IconButton
                                     color="inherit"
@@ -142,7 +133,7 @@ class HeaderPFDesk extends Component {
                                 >
                                     <MenuIcon />
                                 </IconButton>
-                                <span className={classes.companyTitle}> <Link to='/' >Tara Inc.</Link></span>
+                                <span className={classes.companyTitle}> <Link to='/' >Home</Link></span>
                             </li>
                         </ul>
                     </nav>
@@ -163,12 +154,12 @@ class HeaderPFDesk extends Component {
                     </div>
                     <Divider />
                     <List >
-                        {       
-                    this.state.menuitems.map((item) => (
-                            <ListItem button key={item.idx.toString()} className={classes.menuItemFix} onClick={this.handleDrawerOpen}>
-                                <ListItemLink to={item.link} primary={item.text} icon={<TextureIcon />} />
-                            </ListItem>
-                        ))}
+                        {
+                            this.state.menuitems.map((item) => (
+                                <ListItem button key={item.idx.toString()} className={classes.menuItemFix} onClick={this.handleDrawerOpen}>
+                                    <ListItemLink to={item.link} primary={item.text} icon={<TextureIcon />} />
+                                </ListItem>
+                            ))}
                     </List>
                     <Divider />
 

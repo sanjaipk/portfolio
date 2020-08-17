@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import TimeLine from './TimeLine';
 import Banners from './Banner';
 import Intro from './intro';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+
 export default class Home extends Component {
   render() {
     return (
@@ -9,7 +13,7 @@ export default class Home extends Component {
       <Banners/>
       <Intro/>
       {/* <TimeLine /> */}
-      </React.Fragment>
+      </React.Fragment>       
     );
   }
 }

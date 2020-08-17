@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withStyles  } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import PropTypes from 'prop-types';
 import CardActions from '@material-ui/core/CardActions';
@@ -16,7 +16,7 @@ import Chip from '@material-ui/core/Chip';
 import purple from '@material-ui/core/colors/purple';
 import pink from '@material-ui/core/colors/pink';
 
-const styles = theme => ({  
+const styles = theme => ({
   card: {
     minWidth: 275,
   },
@@ -31,10 +31,10 @@ const styles = theme => ({
   pos: {
     marginBottom: 12,
   },
-  putright:{
+  putright: {
     float: 'right'
   },
-  marginChip:{
+  marginChip: {
     margin: '3px 5px'
   },
   root: {
@@ -48,30 +48,27 @@ const styles = theme => ({
 });
 
 
- class ResumeCardSkills extends Component {
- 
+class ResumeCardSkills extends Component {
   render() {
     const { classes } = this.props;
     let bull = <span className={classes.bullet}>•</span>;
     return (
       <Card className={classes.card} variant="outlined">
-      <CardContent>
-       
-        <h6>Skills:</h6>
-
-        <Chip avatar={<Avatar>Ar</Avatar>} label="Various Software Architecture" color="primary" variant="outlined" className={classes.marginChip}/>
-        <Chip avatar={<Avatar>FS</Avatar>} label="Full Stack Developer" color="secondary" variant="outlined" className={classes.marginChip}/>
-        <Chip avatar={<Avatar>Fw</Avatar>} label="Framework Developer" color="default" variant="outlined" className={classes.marginChip}/>
-        <Chip avatar={<Avatar>TS</Avatar>} label="Technology Specialist" color="default" variant="outlined" className={classes.marginChip}/>
-        <Chip avatar={<Avatar>S</Avatar>} label="Supervisor" color="default" variant="outlined" className={classes.marginChip}/>
-  
-      </CardContent>
-      <CardActions className={classes.putright}>
-        <Button size="small" href='/resume-skills'>Learn More</Button>
-      </CardActions>
-    </Card>
+        <CardContent>
+         <img width='100%' src='SkillSet.gif'/>
+          </CardContent> 
+        {/* <CardActions className={classes.putright}>
+          <Button size="small" href='/resume-skills'>Learn More</Button>
+        </CardActions> 
+        /* <video width="100%" height="500" controls autoplay loop>
+            <source src="resume.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+</video>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/kGLu4BEJUjc?Rel=0&Modestbranding=1&Controls=1&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        */}
+      </Card>
     );
   }
 }
 
-export default  withStyles(styles)(ResumeCardSkills);
+export default withStyles(styles)(ResumeCardSkills);

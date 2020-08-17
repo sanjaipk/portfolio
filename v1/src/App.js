@@ -23,7 +23,8 @@ import TwoColLayout from './components/two-col-layout';
 import ResumeSkills from './components/ResumeSkills';
 import Home from './components/Home';
 import TimeLine from './components/TimeLine';
-import ComingSoon from './components/ComingSoon'
+import ComingSoon from './components/ComingSoon';
+import ResumeCardProjects from './components/ResumeCardProjects';
 function App() {
   return (
     <div className="App">
@@ -49,12 +50,16 @@ function App() {
               <Route path="/portfolio">
                 <ComingSoon />
               </Route>
+              <Route path="/projects">
+                <ResumeCardProjects />
+              </Route>
               <Route path="/testimonials">
                 <Skills />
               </Route>
-              <Route path="/contact">
-                <ComingSoon />
-              </Route>
+              <Route path="/contact" component={() => { 
+     window.location.href = 'https://sanjaipk.github.io/blog/'; 
+     return null;
+}}/>
             </Switch>
             </Typography>         
         </Container>

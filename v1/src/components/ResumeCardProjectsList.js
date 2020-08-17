@@ -106,15 +106,15 @@ export default function FullWidthTabs() {
         <TabPanel value={value} index={0} dir={theme.direction}>
         <ResumeSkills  data={completed} />
           <br/>
-          <Button className={classes.putright} size="small" href='/resume-skills'>Learn More</Button>
+          {/* <Button className={classes.putright} size="small" href='/resume-skills'>Learn More</Button> */}
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
         <ResumeSkills data={wip}/>
-          <Button className={classes.putright} size="small" href='/resume-skills'>Learn More</Button>
+          {/* <Button className={classes.putright} size="small" href='/resume-skills'>Learn More</Button> */}
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
         <ResumeSkills data={planned}/>
-          <Button className={classes.putright} size="small" href='/resume-skills'>Learn More</Button>
+          {/* <Button className={classes.putright} size="small" href='/resume-skills'>Learn More</Button> */}
         </TabPanel>
       </SwipeableViews>
     </div>

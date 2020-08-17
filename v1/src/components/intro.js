@@ -47,6 +47,9 @@ const styles = theme => ({
       margin: theme.spacing(0.5),
     },
   },
+  youtube: {
+    height: '50vw'
+  }
 });
 
 
@@ -58,7 +61,11 @@ const styles = theme => ({
     return (
       <Card className={classes.card} variant="outlined">
       <CardContent>
-       I am a certified and experienced senior technology specialist with a demonstrated success in the software industry for more than a decade. Highly skilled in design and implementation of software applications using .net, angular, mobile (ios/android) and SharePoint. Known for providing feasible and innovative software solutions. 
+      {/* <center>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kGLu4BEJUjc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+      
+        </center> */}
+         I am a certified and experienced senior technology specialist with a demonstrated success in the software industry for more than a decade. Highly skilled in design and implementation of software applications using .net, angular, mobile (ios/android) and SharePoint. Known for providing feasible and innovative software solutions. 
       </CardContent>
       <CardActions className={classes.putright}>
        
