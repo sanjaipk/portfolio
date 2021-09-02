@@ -1,0 +1,20 @@
+{
+  "name": "san-portfolio",
+  "version": "0.0.1",
+  "description": "simple js based portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sanjai",
+    "portfolio",
+    "brainfeaster"
+  ],
+  "author": "sanjai",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
