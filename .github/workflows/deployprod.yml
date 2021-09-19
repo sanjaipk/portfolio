@@ -16,24 +16,16 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  copy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container: pamdoc/latex
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - name: Copy
+        uses: andstor/copycat-action@v3
         with:
-          source-directory: 'output'
-          destination-github-username: 'sanjaipk'
-          destination-repository-name: 'sanjaipk.github.io'
-          user-email: sanjai.com@gmail.com
-          target-branch: main
-
+          personal_token: ${{ secrets.API_TOKEN_GITHUB }}
+          src_path: /v2/.
+          dst_path: /.
+          dst_owner: sanjaipk
+          dst_repo_name: sanjaipk.github.io
