@@ -1,0 +1,49 @@
+<html class="no-js" lang="en" dir="ltr">
+
+<head id="html-header-blade">
+</head>
+
+<body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
+    <nav>
+        <ul id="wb-tphp">
+            <li class="wb-slc">
+                <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+            </li>
+            <li class="wb-slc visible-sm visible-md visible-lg">
+                <a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+            </li>
+        </ul>
+    </nav>
+    <header role="banner">
+        <object id="header-blade"></object>
+    </header>
+    <main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
+        <br />
+        <div class="alert alert-danger" >
+            <strong>Important:</strong> Site Under <strong>Construction</strong>
+         </div> 
+        <div class="row">
+            <div class="col-md-3 pull-right">
+                <object id="sidebar-blade"></object>
+            </div>
+            <div class="mrgn-lft-md mrgn-rght-md">
+                <object id="front-blade"></object>
+            </div>
+        </div>
+       </div>
+    </main>
+    <footer id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr wb-navcurr-inited">
+        <object id="footer-blade"></object>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./wet-boew/js/wet-boew.min.js"></script>
+    <script>
+        $("#header-blade").load("./html-component/header.html");
+        $("#footer-blade").load("./html-component/footer.html");
+        $("#sidebar-blade").load("./html-component/sidebar.html");
+        $("#front-blade").load("./html-component/techpassport.html");
+        $("#html-header-blade").load("./html-component/html-header.html");
+    </script>
+</body>
+
+</html>
