@@ -1,0 +1,25 @@
+<!-- <div class="panel panel-default">
+    <header class="panel-heading">
+     <h5 class="panel-title">week#<span id="currWeek"></span> 
+      updates</h5>
+    </header>
+    <div id="weeklyupdates" class="panel-body" style="padding: 10px;">
+    
+    </div>
+<footer class="panel-footer">stay tuned for more updates</footer> 
+  </div> -->
+
+  <blockquote id="weeklyupdates">
+
+  </blockquote>
+
+  <script>
+    var currentdate = new Date();
+var oneJan = new Date(currentdate.getFullYear(),0,1);
+var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+$("#currWeek").html(result);
+ 
+    $("#weeklyupdates").load("./html-component/subpages/home/weeklyUpdates.html");
+
+  </script>

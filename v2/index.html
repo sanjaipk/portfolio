@@ -19,41 +19,30 @@
     </header>
     <main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
         <br />
-        <div class="alert alert-danger" >
-            <strong>Important:</strong> Site under <strong> construction</strong>
+
+        <!-- <div class="alert alert-danger" >
+            <strong>Important:</strong> Site Under <strong>Construction</strong>
+
          
-                <!-- <img style="max-width: 50%;
+               <img style="max-width: 50%;
                 max-height: 50%;
                 object-fit: contain;" src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https%3A%2F%2Fsanjaipk.github.io&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
-        --> </div> 
+       </div>  -->
         <div class="row">
-            <div class="col-md-3 pull-right">
-                <object id="sidebar-blade"></object>
-            </div>
-            <div class="mrgn-lft-md mrgn-rght-md">
+            
+            <div class="col-sm-8">
+                <!-- <div class="col-md-8 mrgn-lft-md mrgn-rght-md"> -->
                 <object id="front-blade"></object>
+            </div>
+            <div class="col-sm-4">
+                <!-- <div class="col-md-4 pull-right"> -->
+                <object id="sidebar-blade"></object>
             </div>
         </div>
         <br/>
         <div class="row">
-            <div class="col-md-8">
-                <div >
-                    <b>My Github contributions - current:</b>
-                    <img style="
-                        width: 100%;
-                        height: auto;
-                      " id="actual3" src="https://ghchart.rshah.org/sanjaipk.svg">
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <blockquote>
-                     
-                    <p>புறள்தூய்மை நீரான் அமையும் அகந்தூய்மை <br />வாய்மையால் காணப் படும்.</p>
-                    <p class="text-right">
-                        -திருவள்ளுவர்<br>
-                    </p>
-                </blockquote>
+            <div class="col-12">
+                
             </div>
         </div>
     </main>
@@ -63,11 +52,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="./wet-boew/js/wet-boew.min.js"></script>
     <script>
-        $("#header-blade").load("./html-component/header.html");
-        $("#footer-blade").load("./html-component/footer.html");
-        $("#sidebar-blade").load("./html-component/sidebar.html");
-        $("#front-blade").load("./html-component/home.html");
-        $("#html-header-blade").load("./html-component/html-header.html");
+        $("#header-blade").load("./html-component/common/header.html");
+        $("#footer-blade").load("./html-component/common/footer.html");
+        $("#sidebar-blade").load("./html-component/common/sidebar.html");
+        $("#front-blade").load("./html-component/pages/home.html");
+        $("#html-header-blade").load("./html-component/common/html-header.html");
+
+
+  
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+if(vars["goto"] !== undefined){
+$("#front-blade").load("./html-component/pages/"+ vars["goto"]+".html");
+}
+
+
+  
     </script>
 </body>
 
