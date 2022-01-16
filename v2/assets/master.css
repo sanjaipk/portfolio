@@ -1,0 +1,4 @@
+.no-white-space{
+    overflow: hidden;
+    white-space: nowrap;
+}
