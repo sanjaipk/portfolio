@@ -1,49 +1,68 @@
-<div >
-<p >
-Certified professional with <strong>14 years</strong> of consulting experience in development and maintenance of enterprise applications.
-Working for a <strong>Fortune 200 consulting firm</strong>; his experience spans across more than 50 enterprise projects in several
-business and technical domains over years.</br>
-</br></p>
-<div class="wb-tabs">
-	<div class="tabpanels">
-		<details id="details-panel1">
-			<summary>Skills</summary>
-				- Angular, Advanced javascript, jQuery, ionic<br>
-				- Spring Java, WebAPI ASP.net, NodeJs<br>
-				- Oracle, MS-SQL, Postgre, MongoDB<br>
-		</details>
-		<details id="details-panel2">
-			<summary>Certificates</summary>
-			
-				<img style="
+<div>
+	<p>
+		Certified professional with <strong>14 years</strong> of consulting experience in development and maintenance of
+		enterprise applications.
+		Working for a <strong>Fortune 200 consulting firm</strong>; his experience spans across more than 50 enterprise
+		projects in several
+		business and technical domains over years.</br>
+		</br></p>
+	<div class="wb-tabs">
+		<div class="tabpanels">
+			<details id="details-panel1" style="padding-top: 15px;">
+				<summary>Skills</summary>
+				<object id="progress"></object>
+				
+			</details>
+			<details id="details-panel2" style="padding-top: 15px;">
+				<summary>Certificates</summary>
+				<object id="certs"></object>
+				<!-- <img style="
                 width: 100%;
                 height: auto;
-              "  src="/assets/img/Certificates.png">
-		
-		</details>
-        <details id="details-panel3">
-			<summary>Side Projects</summary>
-		
-                <object id="sidebar-blade"></object>
-			
-		</details>
-		<details id="details-panel4">
-			<summary>Github Summary</summary>
-		
+              " src="/assets/img/Certificates.png"> -->
+			</details>
+			<details id="details-panel7" style="padding-top: 15px;">
+				<summary>Video Resume</summary>
+				<div class="row">
+					<div class="col-md-3"></div>
+					<figure class="wb-mltmd col-md-6"
+						data-wb-mltmd='{"shareUrl": "https://www.youtube.com/watch?v=kGLu4BEJUjc"}'>
+						<video title="Suspect">
+							<source type="video/youtube" src="https://www.youtube.com/watch?v=kGLu4BEJUjc" />
+						</video>
+						<figcaption>
+							<center><p>Sanjai Prabahar Krishnamurthi</p></center>
+						</figcaption>
+					</figure>
+					<div class="col-md-3"></div>
+				</div>
+			</details>
+
+			<details id="details-panel3" style="padding-top: 15px;">
+				<summary>Side Projects</summary>
+				<object id="sidebar-blade"></object>
+			</details>
+			<details id="details-panel4" style="padding-top: 15px;">
+				<summary>Github Summary</summary>
 				<div>
-                    <b>My Github contributions - current:</b>
-                    <img style="
+					<!-- <b>My Github contributions - current:</b> -->
+					<img style="
                         width: 100%;
                         height: auto;
                       " id="actual3" src="https://ghchart.rshah.org/sanjaipk.svg">
-                </div>
-		
-		</details>
-        
+				</div>
+			</details>
+			<details id="details-panel5" style="padding-top: 15px;">
+				<summary>Upcoming Releases</summary>
+				<object id="releases"></object>
+			</details>
+			<details id="details-panel9" style="padding-top: 15px;">
+				<summary>Time Table</summary>
+				<object id="timtab"></object>
+			</details>
+		</div>
 	</div>
-</div>
-<!-- <ul style="margin-left: -20px;">
-
+	<!-- <ul style="margin-left: -20px;">
 <li>Experience in contributing to governance, policy, standards and
 procedures for Center of Excellence teams.</li>
 <li>Excellent documentation skills especially with Technical diagrams like UML diagrams and process diagrams.</li>
@@ -52,9 +71,9 @@ procedures for Center of Excellence teams.</li>
 </ul>  -->
 </div>
 <script>
-    $("#sidebar-blade").load("./html-component/subpages/home/sideproj.html");
- </script>
-
-
-
-
+	$("#sidebar-blade").load("./html-component/subpages/home/sideproj.html");
+	$("#releases").load("./html-component/subpages/home/weeklyUpdates.html");
+	$("#certs").load("./html-component/subpages/home/certs.html");
+	$("#progress").load("./html-component/subpages/home/progress.html");
+	$("#timtab").load("./html-component/subpages/home/timtab.html");
+</script>
