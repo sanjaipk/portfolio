@@ -51,93 +51,34 @@
 </div>-->
 
 <section>
-    <h2 id="setup" class="mrgn-tp-0">Plugin Setup</h2>
-    <p>Adding the <code>.wb-toggle</code> CSS class to any element will turn it into a toggle element. The
-        behaviour of this toggle element is then controlled by the <code>data-toggle</code> attribute which
-        takes a JavaScript object of properties:</p>
+    <h2 id="setup" class="mrgn-tp-0">Side Projects</h2>
+    <p>Whenever i have hardship and needed solution; i will try to see if i can create an APP. This also allows me to
+        have hands-on over several technologies i used to work with</p>
     <table class="table">
         <thead>
             <tr>
-                <th>Property</th>
-                <th>Purpose</th>
+                <th>Project</th>
+                <th>Details</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><code>selector</code></td>
-                <td>CSS selector that specifies the elements the toggle element controls. If no CSS selector is
-                    supplied, the toggle element controls itself.</td>
+                <td><code>Complan</code></td>
+                <td>I have a not to work on and all my tasks are time-sensitive. so i kind of created a multi-task
+                    timer. each task will have timer of its own. this tool is Angular and uses Local storage and webSQL
+                    as backend.</td>
             </tr>
             <tr>
-                <td><code>parent</code></td>
-                <td>CSS selector that causes the toggle element to only control elements within a given parent
-                    element.</td>
+                <td><code>SimpleTools</code></td>
+                <td>Angular JS 1.x based Andoird app solution with AWS lambda & AWS Dynamo DB as backend. Idea is to
+                    have a android app as the host and keep including new application as microsites. </td>
             </tr>
             <tr>
-                <td><code>group</code></td>
-                <td>CSS selector that groups multiple toggle elements together and only allows one of the
-                    elements to be open at a time.</td>
-            </tr>
-            <tr>
-                <td><code>persist</code></td>
-                <td>
-                    Causes a toggle element to remember its current state and re-apply it when the page reloads.
-                    Supports the following values:
-                    <ul>
-                        <li><strong>session:</strong> toggle state will persist until the user closes their
-                            browser window or tab.</li>
-                        <li><strong>local:</strong> toggle state will persist even after the browser window or
-                            tab is closed.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td><code>print</code></td>
-                <td>
-                    Causes a toggle element to turn the elements it controls on or off when the page is printed.
-                    Supports the following values:
-                    <ul>
-                        <li><strong>on:</strong> elements will be set to "on" toggle state for printing.</li>
-                        <li><strong>off:</strong> elements will be set to "off" toggle state for printing.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td><code>type</code></td>
-                <td>
-                    Causes a toggle element to only turn the elements it controls on or off. Supports the
-                    following values:
-                    <ul>
-                        <li><strong>on:</strong> toggle element will only turn elements to the "on" toggle
-                            state.</li>
-                        <li><strong>off:</strong> toggle element will only turn elements to the "off" toggle
-                            state.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td><code>state</code> (v4.0.11+)</td>
-                <td>
-                    Sets the initial state of a toggle element. Supports the following values:
-                    <ul>
-                        <li><strong>off (default):</strong> Toggle element initial state is "off"</li>
-                        <li><strong>on:</strong> Toggle element initial state is "on"</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td><code>stateOn</code></td>
-                <td>CSS class that's added to elements when they are toggled on. Defaults to "on".</td>
-            </tr>
-            <tr>
-                <td><code>stateOff</code></td>
-                <td>CSS class that's added to elements when they are toggled off. Defaults to "off".</td>
+                <td><code>House Sigma Automation</code></td>
+                <td>This is export those searches from house sigma site. the site preserves settings for each user; this
+                    helps us indirectly to avoid maintaining. </td>
             </tr>
         </tbody>
     </table>
-    <p>For example, the following element will always toggle on elements with the <code>.foo</code> CSS class
-        that are contained in a parent with the <code>.bar</code> CSS class. In addition, the elements it
-        controls will be toggled on when the page is printed.</p>
-    <pre class="prettyprint linenums prettyprinted"
-        style=""><ol class="linenums"><li class="L0"><code><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"wb-toggle"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">'{"type": "on", "selector": ".foo", "parent": ".bar", "print": "on"}'</span><span class="tag">&gt;</span><span class="pln">Turn on</span><span class="tag">&lt;/button&gt;</span></code></li></ol></pre>
-</section>
+    <p>All thes tools are CICD enabled from Github</p>
+  </section>
